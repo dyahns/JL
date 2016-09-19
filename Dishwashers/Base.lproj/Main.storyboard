@@ -60,6 +60,7 @@
                                     <constraint firstAttribute="leadingMargin" secondItem="LO0-W0-DXT" secondAttribute="leading" id="tt9-eO-7To"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="imageView" destination="QxV-iS-C9i" id="ix5-f2-93D"/>
                                     <outlet property="price" destination="LO0-W0-DXT" id="U22-NH-rOQ"/>
                                     <outlet property="title" destination="hgb-rI-Rpn" id="ShI-TE-9x8"/>
                                 </connections>

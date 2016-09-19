@@ -11,7 +11,10 @@ import UIKit
 private let reuseIdentifier = "GridCell"
 
 class GridViewController: UICollectionViewController {
+    
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
+    let dataProvider: DataProviderProtocol = JLAPIDataProvider()
     var items = [Dishwasher]()
     
     override func viewDidLoad() {
@@ -24,7 +27,7 @@ class GridViewController: UICollectionViewController {
         //self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
-        Dishwasher.dishwashers(from: JLAPIDataProvider()) { (items) in
+        Dishwasher.dishwashers(from: self.dataProvider) { (items) in
             self.items = items
 
             DispatchQueue.main.async {
@@ -67,7 +70,16 @@ class GridViewController: UICollectionViewController {
         // Configure the cell
         cell.title.text = items[indexPath.row].title
         cell.price.text = String(format:"£%.2f", items[indexPath.row].priceNow)
-    
+        items[indexPath.row].loadImage(from: dataProvider) { (data) in
+            guard let image = UIImage(data: data) else {
+                return
+            }
+            
+            DispatchQueue.main.async {
+                cell.imageView.image = image
+            }
+        }
+        
         return cell
     }
 

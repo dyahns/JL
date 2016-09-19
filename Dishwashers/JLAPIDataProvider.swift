@@ -13,7 +13,13 @@ class JLAPIDataProvider: DataProviderProtocol {
 
     func getJson(jsonHandler: @escaping ([[String : Any]]) -> Void) {
         let url = URL(string: urlString)!
+        
         session.dataTask(with: url, completionHandler: { (data, response, error) in
+            if let error = error {
+                NSLog("Error reading data from \(url.absoluteString): \(error.localizedDescription)")
+                return
+            }
+
             if let data = data,
                 let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
                 let productsJson = json?["products"] as? [[String: Any]] {
@@ -21,7 +27,25 @@ class JLAPIDataProvider: DataProviderProtocol {
                 NSLog("Got products...")
                 jsonHandler(productsJson)
             }
+        }).resume()
+    }
+    
+    func getImage(urlString: String, jsonHandler: @escaping (Data) -> Void) {
+        guard let url = URL(string: "https:\(urlString)") else {
+            NSLog("Invalid URL error: https:\(urlString)")
+            return
+        }
+        
+        session.dataTask(with: url, completionHandler: { (data, response, error) in
+            if let error = error {
+                NSLog("Error reading data from \(url.absoluteString): \(error.localizedDescription)")
+                return
+            }
             
+            if let data = data {
+                NSLog("Got data from \(urlString)...")
+                jsonHandler(data)
+            }
         }).resume()
     }
     

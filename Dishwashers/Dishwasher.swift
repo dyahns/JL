@@ -40,6 +40,12 @@ class Dishwasher {
         self.imageUrl = image
     }
     
+    func loadImage(from dataProvider: DataProviderProtocol, completion: @escaping (Data) -> Void) {
+        dataProvider.getImage(urlString: imageUrl) { (data) in
+            completion(data)
+        }
+    }
+    
     static func dishwashers(from dataProvider: DataProviderProtocol, completion: @escaping ([Dishwasher]) -> Void) {
         var dishwashers = [Dishwasher]()
         

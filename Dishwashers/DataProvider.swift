@@ -10,5 +10,6 @@ import Foundation
 
 protocol DataProviderProtocol {
     func getJson(jsonHandler: @escaping ([[String: Any]]) -> Void)
+    func getImage(urlString: String, jsonHandler: @escaping (Data) -> Void)
 }
 

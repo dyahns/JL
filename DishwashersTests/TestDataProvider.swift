@@ -6,6 +6,7 @@
 //  Copyright © 2016 Mu-Sonic. All rights reserved.
 //
 
+import Foundation
 @testable import Dishwashers
 
 class TestDataProvider: DataProviderProtocol {
@@ -21,5 +22,10 @@ class TestDataProvider: DataProviderProtocol {
 
     func getJson(jsonHandler: @escaping ([[String : Any]]) -> Void) {
         jsonHandler(data)
+    }
+    
+    func getImage(urlString: String, jsonHandler: @escaping (Data) -> Void) {
+        let imageData = urlString.data(using: String.Encoding.utf8)!
+        jsonHandler(imageData)
     }
 }

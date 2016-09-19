@@ -31,6 +31,16 @@ class DishwashersTests: XCTestCase {
         // invalid price
         XCTAssertThrowsError(try Dishwasher(json: [ "title": "Title 2", "price": [ "now": 0.0 ], "image": ""]))
     }
+
+    func testDishwasherExposesInitData() {
+        let dishwasher = try! Dishwasher(json: [ "title": "Title 1", "price": [ "now": "101.1" ], "image": "image url"])
+        
+        XCTAssertEqual(dishwasher.title, "Title 1")
+        XCTAssertEqual(dishwasher.priceNow, 101.1)
+        dishwasher.loadImage(from: TestDataProvider(count: 0)) { (data) in
+            XCTAssertEqual(String(data: data, encoding: .utf8)!, "image url")
+        }
+    }
     
     func testDishwashersReturnsCollection() {
         let count = 20
