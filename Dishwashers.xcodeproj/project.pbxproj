@@ -8,11 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		8EF11EDA1D8C6556000673F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF11ED91D8C6556000673F9 /* AppDelegate.swift */; };
-		8EF11EDC1D8C6557000673F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF11EDB1D8C6557000673F9 /* ViewController.swift */; };
 		8EF11EDF1D8C6557000673F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EF11EDD1D8C6557000673F9 /* Main.storyboard */; };
 		8EF11EE11D8C6557000673F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EF11EE01D8C6557000673F9 /* Assets.xcassets */; };
 		8EF11EE41D8C6557000673F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EF11EE21D8C6557000673F9 /* LaunchScreen.storyboard */; };
 		8EF11EEF1D8C6557000673F9 /* DishwashersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF11EEE1D8C6557000673F9 /* DishwashersTests.swift */; };
+		8EF11EFB1D8C698E000673F9 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 8EF11EFA1D8C698E000673F9 /* .gitignore */; };
+		8EF11EFF1D8C92DD000673F9 /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF11EFE1D8C92DD000673F9 /* GridViewController.swift */; };
+		8EF11F011D8C9494000673F9 /* GridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF11F001D8C9494000673F9 /* GridCell.swift */; };
+		8EF11F051D8C9BE6000673F9 /* Dishwasher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF11F041D8C9BE6000673F9 /* Dishwasher.swift */; };
+		8EF11F081D8CB2A4000673F9 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF11F071D8CB2A4000673F9 /* DataProvider.swift */; };
+		8EF11F0A1D8CB2E9000673F9 /* TestDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF11F091D8CB2E9000673F9 /* TestDataProvider.swift */; };
+		8EF11F0C1D8CB358000673F9 /* JLAPIDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF11F0B1D8CB358000673F9 /* JLAPIDataProvider.swift */; };
+		8EF11F0D1D8F523F000673F9 /* Dishwasher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF11F041D8C9BE6000673F9 /* Dishwasher.swift */; };
+		8EF11F0E1D8F5247000673F9 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF11F071D8CB2A4000673F9 /* DataProvider.swift */; };
+		8EF11F0F1D8F524C000673F9 /* JLAPIDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF11F0B1D8CB358000673F9 /* JLAPIDataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +37,6 @@
 /* Begin PBXFileReference section */
 		8EF11ED61D8C6556000673F9 /* Dishwashers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dishwashers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EF11ED91D8C6556000673F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8EF11EDB1D8C6557000673F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8EF11EDE1D8C6557000673F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8EF11EE01D8C6557000673F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8EF11EE31D8C6557000673F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +44,13 @@
 		8EF11EEA1D8C6557000673F9 /* DishwashersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DishwashersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EF11EEE1D8C6557000673F9 /* DishwashersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishwashersTests.swift; sourceTree = "<group>"; };
 		8EF11EF01D8C6557000673F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EF11EFA1D8C698E000673F9 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		8EF11EFE1D8C92DD000673F9 /* GridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
+		8EF11F001D8C9494000673F9 /* GridCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridCell.swift; sourceTree = "<group>"; };
+		8EF11F041D8C9BE6000673F9 /* Dishwasher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dishwasher.swift; sourceTree = "<group>"; };
+		8EF11F071D8CB2A4000673F9 /* DataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		8EF11F091D8CB2E9000673F9 /* TestDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestDataProvider.swift; sourceTree = "<group>"; };
+		8EF11F0B1D8CB358000673F9 /* JLAPIDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLAPIDataProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +77,7 @@
 				8EF11ED81D8C6556000673F9 /* Dishwashers */,
 				8EF11EED1D8C6557000673F9 /* DishwashersTests */,
 				8EF11ED71D8C6556000673F9 /* Products */,
+				8EF11EF91D8C6957000673F9 /* Git */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,9 +93,11 @@
 		8EF11ED81D8C6556000673F9 /* Dishwashers */ = {
 			isa = PBXGroup;
 			children = (
-				8EF11ED91D8C6556000673F9 /* AppDelegate.swift */,
-				8EF11EDB1D8C6557000673F9 /* ViewController.swift */,
 				8EF11EDD1D8C6557000673F9 /* Main.storyboard */,
+				8EF11ED91D8C6556000673F9 /* AppDelegate.swift */,
+				8EF11EFE1D8C92DD000673F9 /* GridViewController.swift */,
+				8EF11F001D8C9494000673F9 /* GridCell.swift */,
+				8EF11F061D8CAB73000673F9 /* Models */,
 				8EF11EE01D8C6557000673F9 /* Assets.xcassets */,
 				8EF11EE21D8C6557000673F9 /* LaunchScreen.storyboard */,
 				8EF11EE51D8C6557000673F9 /* Info.plist */,
@@ -91,9 +109,28 @@
 			isa = PBXGroup;
 			children = (
 				8EF11EEE1D8C6557000673F9 /* DishwashersTests.swift */,
+				8EF11F091D8CB2E9000673F9 /* TestDataProvider.swift */,
 				8EF11EF01D8C6557000673F9 /* Info.plist */,
 			);
 			path = DishwashersTests;
+			sourceTree = "<group>";
+		};
+		8EF11EF91D8C6957000673F9 /* Git */ = {
+			isa = PBXGroup;
+			children = (
+				8EF11EFA1D8C698E000673F9 /* .gitignore */,
+			);
+			name = Git;
+			sourceTree = "<group>";
+		};
+		8EF11F061D8CAB73000673F9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8EF11F041D8C9BE6000673F9 /* Dishwasher.swift */,
+				8EF11F071D8CB2A4000673F9 /* DataProvider.swift */,
+				8EF11F0B1D8CB358000673F9 /* JLAPIDataProvider.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,7 +188,6 @@
 					8EF11EE91D8C6557000673F9 = {
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
-						TestTargetID = 8EF11ED51D8C6556000673F9;
 					};
 				};
 			};
@@ -179,6 +215,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EF11EFB1D8C698E000673F9 /* .gitignore in Resources */,
 				8EF11EE41D8C6557000673F9 /* LaunchScreen.storyboard in Resources */,
 				8EF11EE11D8C6557000673F9 /* Assets.xcassets in Resources */,
 				8EF11EDF1D8C6557000673F9 /* Main.storyboard in Resources */,
@@ -199,8 +236,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EF11EDC1D8C6557000673F9 /* ViewController.swift in Sources */,
 				8EF11EDA1D8C6556000673F9 /* AppDelegate.swift in Sources */,
+				8EF11F051D8C9BE6000673F9 /* Dishwasher.swift in Sources */,
+				8EF11F081D8CB2A4000673F9 /* DataProvider.swift in Sources */,
+				8EF11F0C1D8CB358000673F9 /* JLAPIDataProvider.swift in Sources */,
+				8EF11EFF1D8C92DD000673F9 /* GridViewController.swift in Sources */,
+				8EF11F011D8C9494000673F9 /* GridCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +249,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EF11F0F1D8F524C000673F9 /* JLAPIDataProvider.swift in Sources */,
+				8EF11F0A1D8CB2E9000673F9 /* TestDataProvider.swift in Sources */,
 				8EF11EEF1D8C6557000673F9 /* DishwashersTests.swift in Sources */,
+				8EF11F0E1D8F5247000673F9 /* DataProvider.swift in Sources */,
+				8EF11F0D1D8F523F000673F9 /* Dishwasher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,13 +408,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = DishwashersTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mu-sonic.DishwashersTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dishwashers.app/Dishwashers";
 			};
 			name = Debug;
 		};
@@ -377,13 +420,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = DishwashersTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mu-sonic.DishwashersTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dishwashers.app/Dishwashers";
 			};
 			name = Release;
 		};
@@ -406,6 +447,7 @@
 				8EF11EF51D8C6557000673F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8EF11EF61D8C6557000673F9 /* Build configuration list for PBXNativeTarget "DishwashersTests" */ = {
 			isa = XCConfigurationList;
@@ -414,6 +456,7 @@
 				8EF11EF81D8C6557000673F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
