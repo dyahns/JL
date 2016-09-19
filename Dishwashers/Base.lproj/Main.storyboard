@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -32,18 +34,34 @@
                                     <rect key="frame" x="0.0" y="0.0" width="255" height="367"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgb-rI-Rpn">
-                                            <frame key="frameInset" minX="8" minY="8" width="240" height="352"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QxV-iS-C9i"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgb-rI-Rpn">
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LO0-W0-DXT">
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </view>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="hgb-rI-Rpn" firstAttribute="top" secondItem="QxV-iS-C9i" secondAttribute="bottom" constant="8" id="0u4-xA-vOc"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="hgb-rI-Rpn" secondAttribute="trailing" id="2sD-zx-ejZ"/>
+                                    <constraint firstAttribute="topMargin" secondItem="QxV-iS-C9i" secondAttribute="top" id="EOg-Uk-oyF"/>
+                                    <constraint firstAttribute="leadingMargin" secondItem="QxV-iS-C9i" secondAttribute="leading" id="FG5-f1-iWU"/>
+                                    <constraint firstItem="QxV-iS-C9i" firstAttribute="height" secondItem="Npe-4H-ulw" secondAttribute="height" multiplier="0.6" id="V96-1Q-a04"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="QxV-iS-C9i" secondAttribute="trailing" id="Vbl-8D-VgS"/>
+                                    <constraint firstItem="LO0-W0-DXT" firstAttribute="top" secondItem="hgb-rI-Rpn" secondAttribute="bottom" constant="8" id="jQg-81-Loc"/>
+                                    <constraint firstItem="hgb-rI-Rpn" firstAttribute="leading" secondItem="Npe-4H-ulw" secondAttribute="leadingMargin" constant="-1" id="rus-lx-oxP"/>
+                                    <constraint firstAttribute="leadingMargin" secondItem="LO0-W0-DXT" secondAttribute="leading" id="tt9-eO-7To"/>
+                                </constraints>
                                 <connections>
-                                    <outlet property="label" destination="hgb-rI-Rpn" id="m16-0M-bb8"/>
+                                    <outlet property="price" destination="LO0-W0-DXT" id="U22-NH-rOQ"/>
+                                    <outlet property="title" destination="hgb-rI-Rpn" id="ShI-TE-9x8"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -59,7 +77,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XSb-j5-8Wp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="998.43749999999989" y="154.6875"/>
+            <point key="canvasLocation" x="997.60000000000002" y="154.27286356821591"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8FQ-Tp-EF8">

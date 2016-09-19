@@ -22,8 +22,14 @@ class DishwashersTests: XCTestCase {
     }
     
     func testDishwasherThrowsOnInvalidJson() {
-        XCTAssertThrowsError(try Dishwasher(json: [ "title": 2 ])) // invalid title
-        XCTAssertThrowsError(try Dishwasher(json: [ "name": "Title 2" ])) // missing title
+        // invalid title
+        XCTAssertThrowsError(try Dishwasher(json: [ "title": 2, "price": [ "now": "0.0" ], "image": "" ]))
+        
+        // missing title
+        XCTAssertThrowsError(try Dishwasher(json: [ "price": [ "now": "0.0" ], "image": "" ]))
+        
+        // invalid price
+        XCTAssertThrowsError(try Dishwasher(json: [ "title": "Title 2", "price": [ "now": 0.0 ], "image": ""]))
     }
     
     func testDishwashersReturnsCollection() {
@@ -35,10 +41,11 @@ class DishwashersTests: XCTestCase {
 
     func testInvalidJsonGracefullyDroppedFromDishwashersCollection() {
         let json = [
-            [ "title": "Title 1" ],
-            [ "title": 2 ], // invalid title
-            [ "name": "Title 2" ], // missing title
-            [ "title": "Title 3" ]
+            [ "title": "Title 1", "price": [ "now": "0.0" ], "image": "" ],
+            [ "title": 2, "price": [ "now": "0.0" ], "image": "" ], // invalid title
+            [ "name": "Title 2", "price": [ "now": "0.0" ], "image": "" ], // missing title
+            [ "title": "Title 2", "price": [ "now": 0.0 ], "image": "" ], // invalid price
+            [ "title": "Title 3", "price": [ "now": "0.0" ], "image": "" ]
         ]
         Dishwasher.dishwashers(from: TestDataProvider(json: json)) { (items) in
             XCTAssert(items.count == 2)

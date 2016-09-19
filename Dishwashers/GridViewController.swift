@@ -65,7 +65,8 @@ class GridViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! GridCell
     
         // Configure the cell
-        cell.label.text = items[indexPath.row].title
+        cell.title.text = items[indexPath.row].title
+        cell.price.text = String(format:"£%.2f", items[indexPath.row].priceNow)
     
         return cell
     }
