@@ -22,6 +22,8 @@
 		8EF11F0D1D8F523F000673F9 /* Dishwasher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF11F041D8C9BE6000673F9 /* Dishwasher.swift */; };
 		8EF11F0E1D8F5247000673F9 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF11F071D8CB2A4000673F9 /* DataProvider.swift */; };
 		8EF11F0F1D8F524C000673F9 /* JLAPIDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF11F0B1D8CB358000673F9 /* JLAPIDataProvider.swift */; };
+		8EF11F131D905B1C000673F9 /* JLAPIDataProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF11F121D905B1C000673F9 /* JLAPIDataProviderTests.swift */; };
+		8EF11F171D90708F000673F9 /* TestSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF11F141D905C3A000673F9 /* TestSessionDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,9 @@
 		8EF11F071D8CB2A4000673F9 /* DataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
 		8EF11F091D8CB2E9000673F9 /* TestDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestDataProvider.swift; sourceTree = "<group>"; };
 		8EF11F0B1D8CB358000673F9 /* JLAPIDataProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLAPIDataProvider.swift; sourceTree = "<group>"; };
+		8EF11F101D902B96000673F9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8EF11F121D905B1C000673F9 /* JLAPIDataProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLAPIDataProviderTests.swift; sourceTree = "<group>"; };
+		8EF11F141D905C3A000673F9 /* TestSessionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TestSessionDelegate.swift; path = DishwashersTests/TestSessionDelegate.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +79,7 @@
 		8EF11ECD1D8C6556000673F9 = {
 			isa = PBXGroup;
 			children = (
+				8EF11F101D902B96000673F9 /* README.md */,
 				8EF11ED81D8C6556000673F9 /* Dishwashers */,
 				8EF11EED1D8C6557000673F9 /* DishwashersTests */,
 				8EF11ED71D8C6556000673F9 /* Products */,
@@ -108,8 +114,8 @@
 		8EF11EED1D8C6557000673F9 /* DishwashersTests */ = {
 			isa = PBXGroup;
 			children = (
-				8EF11EEE1D8C6557000673F9 /* DishwashersTests.swift */,
-				8EF11F091D8CB2E9000673F9 /* TestDataProvider.swift */,
+				8EF11F191D90B377000673F9 /* UnitTests */,
+				8EF11F1A1D90B384000673F9 /* IntegrationTests */,
 				8EF11EF01D8C6557000673F9 /* Info.plist */,
 			);
 			path = DishwashersTests;
@@ -131,6 +137,24 @@
 				8EF11F0B1D8CB358000673F9 /* JLAPIDataProvider.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		8EF11F191D90B377000673F9 /* UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				8EF11EEE1D8C6557000673F9 /* DishwashersTests.swift */,
+				8EF11F091D8CB2E9000673F9 /* TestDataProvider.swift */,
+			);
+			name = UnitTests;
+			sourceTree = "<group>";
+		};
+		8EF11F1A1D90B384000673F9 /* IntegrationTests */ = {
+			isa = PBXGroup;
+			children = (
+				8EF11F121D905B1C000673F9 /* JLAPIDataProviderTests.swift */,
+				8EF11F141D905C3A000673F9 /* TestSessionDelegate.swift */,
+			);
+			name = IntegrationTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -252,6 +276,8 @@
 				8EF11F0F1D8F524C000673F9 /* JLAPIDataProvider.swift in Sources */,
 				8EF11F0A1D8CB2E9000673F9 /* TestDataProvider.swift in Sources */,
 				8EF11EEF1D8C6557000673F9 /* DishwashersTests.swift in Sources */,
+				8EF11F171D90708F000673F9 /* TestSessionDelegate.swift in Sources */,
+				8EF11F131D905B1C000673F9 /* JLAPIDataProviderTests.swift in Sources */,
 				8EF11F0E1D8F5247000673F9 /* DataProvider.swift in Sources */,
 				8EF11F0D1D8F523F000673F9 /* Dishwasher.swift in Sources */,
 			);

@@ -9,10 +9,17 @@
 import Foundation
 
 class JLAPIDataProvider: DataProviderProtocol {
-    private let urlString = "https://api.johnlewis.com/v1/products/search?q=dishwasher&key=Wu1Xqn3vNrd1p7hqkvB6hEu0G9OrsYGb&pageSize=20"
+    private static let urlString = "https://api.johnlewis.com/v1/products/search?q=dishwasher&key=Wu1Xqn3vNrd1p7hqkvB6hEu0G9OrsYGb&pageSize=20"
+
+    // shared session for interacting with the web service
+    let session: URLSession
+    
+    init(sessionDelegate: URLSessionDelegate? = nil) {
+        self.session = URLSession(configuration: URLSessionConfiguration.default, delegate: sessionDelegate, delegateQueue: nil)
+    }
 
     func getJson(jsonHandler: @escaping ([[String : Any]]) -> Void) {
-        let url = URL(string: urlString)!
+        let url = URL(string: JLAPIDataProvider.urlString)!
         
         session.dataTask(with: url, completionHandler: { (data, response, error) in
             if let error = error {
@@ -48,11 +55,5 @@ class JLAPIDataProvider: DataProviderProtocol {
             }
         }).resume()
     }
-    
-    // shared session for interacting with the web service
-    lazy var session: URLSession = {
-        let session = URLSession(configuration: URLSessionConfiguration.ephemeral)
-        
-        return session
-    }()
+
 }

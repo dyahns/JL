@@ -7,7 +7,6 @@
 //
 
 import Foundation
-@testable import Dishwashers
 
 class TestDataProvider: DataProviderProtocol {
     private let data: [[String : Any]]

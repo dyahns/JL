@@ -32,12 +32,13 @@ class DishwashersTests: XCTestCase {
         XCTAssertThrowsError(try Dishwasher(json: [ "title": "Title 2", "price": [ "now": 0.0 ], "image": ""]))
     }
 
-    func testDishwasherExposesInitData() {
+    func testDishwasherDetailsAreAsExpected() {
         let dishwasher = try! Dishwasher(json: [ "title": "Title 1", "price": [ "now": "101.1" ], "image": "image url"])
         
         XCTAssertEqual(dishwasher.title, "Title 1")
         XCTAssertEqual(dishwasher.priceNow, 101.1)
         dishwasher.loadImage(from: TestDataProvider(count: 0)) { (data) in
+            // TestDataProvider implementation doesn't have async code
             XCTAssertEqual(String(data: data, encoding: .utf8)!, "image url")
         }
     }
@@ -45,11 +46,12 @@ class DishwashersTests: XCTestCase {
     func testDishwashersReturnsCollection() {
         let count = 20
         Dishwasher.dishwashers(from: TestDataProvider(count: count)) { (items) in
+            // TestDataProvider implementation doesn't have async code
             XCTAssert(items.count <= count)
         }
     }
 
-    func testInvalidJsonGracefullyDroppedFromDishwashersCollection() {
+    func testDishwashersGracefullyDropInvalidJsonItems() {
         let json = [
             [ "title": "Title 1", "price": [ "now": "0.0" ], "image": "" ],
             [ "title": 2, "price": [ "now": "0.0" ], "image": "" ], // invalid title
@@ -58,6 +60,7 @@ class DishwashersTests: XCTestCase {
             [ "title": "Title 3", "price": [ "now": "0.0" ], "image": "" ]
         ]
         Dishwasher.dishwashers(from: TestDataProvider(json: json)) { (items) in
+            // TestDataProvider implementation doesn't have async code
             XCTAssert(items.count == 2)
         }
     }
